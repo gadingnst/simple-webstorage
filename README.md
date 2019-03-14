@@ -1,5 +1,5 @@
-# [Simple Web Storage](https://github.com/sutanlab/simple-webstorage)
-> Utilities that can make easier write and read application storage in client browser
+# [Simple Web Storage](https://www.npmjs.com/package/simple-webstorage)
+> Lightweight utilities that can make easier to write and read application storage in client browser.
 
 #### Support :
 - Local Storage

@@ -1,7 +1,7 @@
 {
   "name": "simple-webstorage",
   "version": "1.0.2",
-  "description": "Utilities that can make easier write and read application storage in client browser",
+  "description": "Lightweight utilities that can make easier to write and read application storage in client browser.",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

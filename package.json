@@ -1,0 +1,35 @@
+{
+  "name": "web-storage",
+  "version": "1.0.0",
+  "description": "Utilities that can make easier write and read storage in client browser",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d lib",
+    "prepublish": "node_modules/babel-cli/bin/babel.js src --out-dir lib"
+  },
+  "babel": {
+    "presets": ["latest"]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sutanlab/web-storage.git"
+  },
+  "keywords": [
+    "web-storage",
+    "browser-storage",
+    "local-storage",
+    "session-storage",
+    "cookie-storage"
+  ],
+  "author": "Sutan Nst. <sutan.gnst@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sutanlab/web-storage/issues"
+  },
+  "homepage": "https://github.com/sutanlab/web-storage#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-latest": "^6.24.1"
+  }
+}

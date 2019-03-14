@@ -1,6 +1,6 @@
 {
   "name": "simple-webstorage",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "Lightweight utilities that can make easier to write and read application storage in client browser.",
   "main": "lib/index.js",
   "scripts": {
@@ -13,6 +13,7 @@
       "@babel/preset-env"
     ]
   },
+  "files": ["lib"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sutanlab/simple-webstorage.git"

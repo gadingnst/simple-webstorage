@@ -29,13 +29,13 @@ SimpleWebStorage.cookie.set('key', 'value', 5)
 
 ```js
 // # for local storage
-import { get as getLocalStorage, set as setLocalStorage } from 'simple-webstorage/local'
+import { get as getLocalStorage, set as setLocalStorage } from 'simple-webstorage/lib/local'
 
 // # for session storage
-// import { get, set } from 'simple-webstorage/session'
+// import { get, set } from 'simple-webstorage/lib/session'
 
 // # for cookie storage
-// import { get, set } from 'simple-webstorage/cookie'
+// import { get, set } from 'simple-webstorage/lib/cookie'
 
 setLocalStorage('key', 'value')
 ```

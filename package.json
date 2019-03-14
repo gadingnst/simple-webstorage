@@ -1,7 +1,7 @@
 {
-  "name": "simple-webstore",
+  "name": "simple-webstorage",
   "version": "1.0.0",
-  "description": "Utilities that can make easier write and read storage in client browser",
+  "description": "Utilities that can make easier write and read application storage in client browser",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sutanlab/simple-webstore.git"
+    "url": "git+https://github.com/sutanlab/simple-webstorage.git"
   },
   "keywords": [
     "web-storage",
@@ -25,9 +25,9 @@
   "author": "Sutan Nst. <sutan.gnst@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sutanlab/simple-webstore/issues"
+    "url": "https://github.com/sutanlab/simple-webstorage/issues"
   },
-  "homepage": "https://github.com/sutanlab/simple-webstore#readme",
+  "homepage": "https://github.com/sutanlab/simple-webstorage#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-latest": "^6.24.1"

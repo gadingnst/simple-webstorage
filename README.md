@@ -43,7 +43,7 @@ setData('key', 'value')
 ### 2. All in minified js
 
 ```html
-<script type="text/javascript" src="https://sutanlab.js.org/simple-webstorage/bundle/simple-webstorage.min.js"></script>
+<script type="text/javascript" src="https://sutanlab.js.org/simple-webstorage/lib/bundle/simple-webstorage.min.js"></script>
 
 <script type="text/javascript">
   SimpleWebStorage.local.set('key', 'value')

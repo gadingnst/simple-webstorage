@@ -1,19 +1,39 @@
-import Storage from './storage'
+const isNotNull = variable => {
+  if (typeof variable !== 'undefined' && variable !== null) return true
+  return false
+}
 
-export const getData = (key) => {
-  if (process.client) {
-    try {
-      const ls = 'sessionStorage' in window && window.sessionStorage ? window.sessionStorage : null
-      return Storage.getData(ls, key)
-    } catch (err) {}
+export const getData = key => {
+  const cache = window.sessionStorage.getItem(key)
+  if (isNotNull(cache)) {
+    const cacheParsed = JSON.parse(cache)
+    if (isNotNull(cacheParsed)) {
+      const timeNow = new Date().getTime()
+      const dateCache = cacheParsed.created
+      const expiryInMilis = parseInt(cacheParsed.expiry, 10) * 60 * 1000
+      const expiryTime = parseInt(dateCache, 10) + expiryInMilis
+      
+      if (expiryTime > timeNow) return cacheParsed.value
+      else removeData(key)
+    }
   }
+  return null
 }
 
 export const setData = (key, value = '', expiryInMinutes = 5) => {
-  if (process.client) {
-    try {
-      const ls = 'sessionStorage' in window && window.sessionStorage ? window.sessionStorage : null
-      return Storage.setData(ls, key, value, expiryInMinutes)
-    } catch (err) {}
+  const data = {
+    created: new Date().getTime(),
+    value,
+    expiry: expiryInMinutes,
   }
+  window.sessionStorage.setItem(key, JSON.stringify(data))
+  return data
+}
+
+export const removeData = key => {
+  return window.sessionStorage.removeItem(key)
+}
+
+export const clearData = () => {
+  return window.sessionStorage.clear()
 }

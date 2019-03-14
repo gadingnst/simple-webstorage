@@ -1,8 +1,8 @@
-export const setData = (name, value, expirydays) => {
+export const setData = (name, value, expiryInMinutes = 5) => {
   let expires = ''
-  if (expirydays) {
+  if (expiryInMinutes) {
     const date = new Date();
-    date.setTime(date.getTime() + (expirydays * 24 * 60 * 60 * 1000))
+    date.setTime(date.getTime() + (expiryInMinutes * 60 * 1000))
     expires = '; expires=' + date.toGMTString()
   }
   document.cookie = name + '=' + JSON.stringify(value) + expires + '; path=/'

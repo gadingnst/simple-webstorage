@@ -1,3 +1,6 @@
-/lib/
+/lib/*
 /node_modules/
 package-lock.json
+
+# ignore bundle directory
+!/lib/bundle/

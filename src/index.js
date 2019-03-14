@@ -2,7 +2,7 @@ import { getData as getDataLocal, setData as setDataLocal } from './local'
 import { getData as getDataSession, setData as setDataSession } from './session'
 import { getData as getDataCookie, setData as setDataCookie, deleteData as deleteDataCookie } from './cookie'
 
-const Storage = {
+const WebStorage = {
   local: {
     get: getDataLocal,
     set: setDataLocal,
@@ -18,4 +18,4 @@ const Storage = {
   }
 }
 
-export default Storage
+export default WebStorage

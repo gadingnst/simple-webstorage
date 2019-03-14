@@ -1,21 +1,21 @@
 import { 
-  getData as getDataLocal, 
-  setData as setDataLocal,
-  removeData as removeDataLocal,
-  clearData as clearDataLocal
+  get as getDataLocal, 
+  set as setDataLocal,
+  remove as removeDataLocal,
+  clear as clearDataLocal
 } from './local'
 
 import {
-  getData as getDataSession, 
-  setData as setDataSession,
-  removeData as removeDataSession,
-  clearData as clearDataSession
+  get as getDataSession, 
+  set as setDataSession,
+  remove as removeDataSession,
+  clear as clearDataSession
 } from './session'
 
 import { 
-  getData as getDataCookie,
-  setData as setDataCookie,
-  deleteData as deleteDataCookie 
+  get as getDataCookie,
+  set as setDataCookie,
+  remove as removeDataCookie 
 } from './cookie'
 
 global.SimpleWebStorage = {
@@ -34,7 +34,7 @@ global.SimpleWebStorage = {
   cookie: {
     get: getDataCookie,
     set: setDataCookie,
-    delete: deleteDataCookie
+    remove: removeDataCookie
   }
 }
 

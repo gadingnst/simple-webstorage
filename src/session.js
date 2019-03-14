@@ -3,7 +3,7 @@ const isNotNull = variable => {
   return false
 }
 
-export const getData = key => {
+export const get = key => {
   const cache = window.sessionStorage.getItem(key)
   if (isNotNull(cache)) {
     const cacheParsed = JSON.parse(cache)
@@ -14,13 +14,13 @@ export const getData = key => {
       const expiryTime = parseInt(dateCache, 10) + expiryInMilis
       
       if (expiryTime > timeNow) return cacheParsed.value
-      else removeData(key)
+      else remove(key)
     }
   }
   return null
 }
 
-export const setData = (key, value = '', expiryInMinutes = 5) => {
+export const set = (key, value = '', expiryInMinutes = 5) => {
   const data = {
     created: new Date().getTime(),
     value,
@@ -30,10 +30,10 @@ export const setData = (key, value = '', expiryInMinutes = 5) => {
   return data
 }
 
-export const removeData = key => {
+export const remove = key => {
   return window.sessionStorage.removeItem(key)
 }
 
-export const clearData = () => {
+export const clear = () => {
   return window.sessionStorage.clear()
 }

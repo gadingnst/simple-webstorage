@@ -1,4 +1,4 @@
-export const setData = (name, value, expiryInMinutes = 5) => {
+export const set = (name, value, expiryInMinutes = 5) => {
   let expires = ''
   if (expiryInMinutes) {
     const date = new Date();
@@ -8,7 +8,7 @@ export const setData = (name, value, expiryInMinutes = 5) => {
   document.cookie = name + '=' + JSON.stringify(value) + expires + '; path=/'
 }
 
-export const getData = name => {
+export const get = name => {
   name = name + '='
   const cookie = document.cookie.split(';')
   for(let i = 0; i < cookie.length; i++) {
@@ -19,6 +19,6 @@ export const getData = name => {
   return null
 }
 
-export const deleteData = name => {
-  setData(name, '', -1)
+export const remove = name => {
+  set(name, '', -1)
 }

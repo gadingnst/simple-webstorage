@@ -29,15 +29,15 @@ SimpleWebStorage.cookie.set('key', 'value', 5)
 
 ```js
 // # for local storage
-import { getData, setData } from 'simple-web-storage/local'
+import { get as getLocalStorage, set as setLocalStorage } from 'simple-webstorage/local'
 
 // # for session storage
-// import { getData, setData } from 'simple-web-storage/session'
+// import { get, set } from 'simple-webstorage/session'
 
 // # for cookie storage
-// import { getData, setData } from 'simple-web-storage/cookie'
+// import { get, set } from 'simple-webstorage/cookie'
 
-setData('key', 'value')
+setLocalStorage('key', 'value')
 ```
 
 ### 2. All in minified js
@@ -51,6 +51,20 @@ setData('key', 'value')
   SimpleWebStorage.cookie.set('key', 'value', 5)
 </script>
 ```
+
+## API Details
+
+| Storage   | Method Name | Parameter                                                                   | Notes   |
+|-----------|-------------|-----------------------------------------------------------------------------|---------|
+| `local`   | get         | `key` (type: String)                                                        |         |
+| `local`   | set         | `key` (type: String), `value` (type: any)                                   |         |
+| `local`   | remove      | `key` (type: String)                                                        |         |
+| `cookie`  | get         | `key` (type: String)                                                        |         |
+| `cookie`  | set         | `key` (type: String), `value` (type: any), `expiryInMinutes` (type: Number) |         |
+| `cookie`  | remove      | `key` (type: String)                                                        |         |
+| `session` | get         | `key` (type: String)                                                        |         |
+| `session` | set         | `key` (type: String), `value` (type: any), `expiryInMinutes` (type: Number) |         |
+| `session` | remove      | `key` (type: String)                                                        |         |
 ---
 
 Copyright © 2019 by Sutan Gading Fadhillah Nasution

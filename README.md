@@ -1,6 +1,8 @@
 # Simple Web Storage
 > Utilities that can make easier write and read application storage in client browser
 
+> Repository: https://github.com/sutanlab/simple-webstorage
+
 #### Support :
 - Local Storage
 - Cookie Storage

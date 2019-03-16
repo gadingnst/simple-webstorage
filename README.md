@@ -22,7 +22,7 @@ import SimpleWebStorage from 'simple-webstorage'
 
 const storage = SimpleWebStorage()
 
-storage.local.set('key', 'value') // empty the third parameter to store data permanently (only effected in local)
+storage.local.set('key', 'value') // empty the third parameter to store data permanently (only affected in local)
 storage.cookie.set('key', 'value', 5)
 storage.session.set('key', 'value', 5)
 ```

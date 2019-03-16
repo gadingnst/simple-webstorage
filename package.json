@@ -4,9 +4,9 @@
   "description": "Lightweight utilities that can make easier to write and read application storage in client browser.",
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel src -d lib; webpack",
-    "prepublish": "babel src -d lib; webpack"
+    "prepublish": "babel src -d lib; webpack",
+    "test": "jest"
   },
   "babel": {
     "presets": [
@@ -40,6 +40,7 @@
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
+    "jest": "^24.5.0",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3"
   },

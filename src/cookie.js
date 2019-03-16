@@ -39,3 +39,5 @@ export const clear = () => {
   }
   return true
 }
+
+export default () => ({ get, set, remove, clear })

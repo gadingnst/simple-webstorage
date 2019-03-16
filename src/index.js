@@ -19,7 +19,7 @@ import {
   clear as clearDataCookie
 } from './cookie'
 
-global.SimpleWebStorage = {
+global.SimpleWebStorage = () => ({
   local: {
     get: getDataLocal,
     set: setDataLocal,
@@ -38,6 +38,6 @@ global.SimpleWebStorage = {
     remove: removeDataCookie,
     clear: clearDataCookie
   }
-}
+})
 
 export default SimpleWebStorage

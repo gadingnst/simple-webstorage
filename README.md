@@ -20,9 +20,14 @@ $ npm i simple-webstorage --save
 ```js
 import SimpleWebStorage from 'simple-webstorage'
 
-SimpleWebStorage.local.set('key', 'value')
-SimpleWebStorage.cookie.set('key', 'value', 5)
-SimpleWebStorage.session.set('key', 'value', 5)
+const storage = SimpleWebStorage()
+
+// or 
+// # const storage = require('simple-webstorage')()
+
+storage.local.set('key', 'value')
+storage.cookie.set('key', 'value', 5)
+storage.session.set('key', 'value', 5)
 ```
 
 #### Partial API import
@@ -53,7 +58,8 @@ console.log(getLocalStorage('key')) // { name: 'you', skill: ['angry', 'crying']
 ```html
 <script type="text/javascript" src="https://sutanlab.js.org/simple-webstorage/lib/bundle/simple-webstorage.min.js"></script>
 <script type="text/javascript">
-  var storage = SimpleWebStorage;
+  var storage = SimpleWebStorage();
+
   storage.local.set('key', 'value');
   storage.cookie.set('key', 'value', 5);
   storage.session.set('key', 'value', 5);

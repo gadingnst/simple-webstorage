@@ -62,21 +62,22 @@ console.log(getLocalStorage('key')) // { name: 'you', skill: ['angry', 'crying']
 
 ## API Details
 
-| Storage   | Method      | Parameters                                                                            |Notes |
-|-----------|-------------|---------------------------------------------------------------------------------------------||
-| `local`   | get         | `key` (type: String)                                                                        ||
-| `local`   | set         | `key` (type: String), `value` (type: any), `expiryInMinutes` (type: Number, default: null)  ||
-| `local`   | remove      | `key` (type: String)                                                                        ||
-| `local`   | clear       |  none                                                                                       ||
-| `cookie`  | get         | `key` (type: String)                                                                        ||
-| `cookie`  | set         | `key` (type: String), `value` (type: any), `expiryInMinutes` (type: Number, default: 5)     ||
-| `cookie`  | remove      | `key` (type: String)                                                                        ||
-| `cookie`  | clear       |  none                                                                                       ||
-| `session` | get         | `key` (type: String)                                                                        ||
-| `session` | set         | `key` (type: String), `value` (type: any), `expiryInMinutes` (type: Number, default: 5)     ||
-| `session` | remove      | `key` (type: String)                                                                        ||
-| `session` | clear       |  none                                                                                       ||
+| Storage   | Method      | Parameters                                                                                  |
+|-----------|-------------|---------------------------------------------------------------------------------------------|
+| `local`   | get         | `key` (type: String)                                                                        |
+| `local`   | set         | `key` (type: String), `value` (type: any), `expiryInMinutes` (type: Number, default: null)  |
+| `local`   | remove      | `key` (type: String)                                                                        |
+| `local`   | clear       |  none                                                                                       |
+| `cookie`  | get         | `key` (type: String)                                                                        |
+| `cookie`  | set         | `key` (type: String), `value` (type: any), `expiryInMinutes` (type: Number, default: 5)     |
+| `cookie`  | remove      | `key` (type: String)                                                                        |
+| `cookie`  | clear       |  none                                                                                       |
+| `session` | get         | `key` (type: String)                                                                        |
+| `session` | set         | `key` (type: String), `value` (type: any), `expiryInMinutes` (type: Number, default: 5)     |
+| `session` | remove      | `key` (type: String)                                                                        |
+| `session` | clear       |  none                                                                                       |
 
 ---
 Feel free to contribute [simple-webstorage](https://github.com/sutanlab/simple-webstorage) 🙂
+
 Copyright © 2019 by Sutan Gading Fadhillah Nasution

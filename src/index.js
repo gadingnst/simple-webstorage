@@ -15,7 +15,8 @@ import {
 import { 
   get as getDataCookie,
   set as setDataCookie,
-  remove as removeDataCookie 
+  remove as removeDataCookie,
+  clear as clearDataCookie
 } from './cookie'
 
 global.SimpleWebStorage = {
@@ -34,7 +35,8 @@ global.SimpleWebStorage = {
   cookie: {
     get: getDataCookie,
     set: setDataCookie,
-    remove: removeDataCookie
+    remove: removeDataCookie,
+    clear: clearDataCookie
   }
 }
 

@@ -1,7 +1,7 @@
 # [Simple Web Storage](https://www.npmjs.com/package/simple-webstorage)
 > Lightweight utilities that can make easier to write and read application storage in client browser.
 
-#### Support :
+### Support :
 - Local Storage
 - Cookie Storage
 - Session Storage
@@ -21,11 +21,11 @@ $ npm i simple-webstorage --save
 import SimpleWebStorage from 'simple-webstorage'
 
 SimpleWebStorage.local.set('key', 'value')
-SimpleWebStorage.session.set('key', 'value', 5)
 SimpleWebStorage.cookie.set('key', 'value', 5)
+SimpleWebStorage.session.set('key', 'value', 5)
 ```
 
-#### Partial import
+#### Partial API import
 
 ```js
 // # for local storage
@@ -37,34 +37,46 @@ import { get as getLocalStorage, set as setLocalStorage } from 'simple-webstorag
 // # for cookie storage
 // import { get, set } from 'simple-webstorage/lib/cookie'
 
-setLocalStorage('key', 'value')
+setLocalStorage('key', {
+  name: 'you',
+  skill: [
+    'angry',
+    'crying'
+  ]
+})
+
+console.log(getLocalStorage('key')) // { name: 'you', skill: ['angry', 'crying'] }
 ```
 
 ### 2. All in minified js
 
 ```html
 <script type="text/javascript" src="https://sutanlab.js.org/simple-webstorage/lib/bundle/simple-webstorage.min.js"></script>
-
 <script type="text/javascript">
-  SimpleWebStorage.local.set('key', 'value')
-  SimpleWebStorage.session.set('key', 'value', 5)
-  SimpleWebStorage.cookie.set('key', 'value', 5)
+  var storage = SimpleWebStorage;
+  storage.local.set('key', 'value');
+  storage.cookie.set('key', 'value', 5);
+  storage.session.set('key', 'value', 5);
 </script>
 ```
 
 ## API Details
 
-| Storage   | Method Name | Parameter                                                                   | Notes   |
-|-----------|-------------|-----------------------------------------------------------------------------|---------|
-| `local`   | get         | `key` (type: String)                                                        |         |
-| `local`   | set         | `key` (type: String), `value` (type: any)                                   |         |
-| `local`   | remove      | `key` (type: String)                                                        |         |
-| `cookie`  | get         | `key` (type: String)                                                        |         |
-| `cookie`  | set         | `key` (type: String), `value` (type: any), `expiryInMinutes` (type: Number) |         |
-| `cookie`  | remove      | `key` (type: String)                                                        |         |
-| `session` | get         | `key` (type: String)                                                        |         |
-| `session` | set         | `key` (type: String), `value` (type: any), `expiryInMinutes` (type: Number) |         |
-| `session` | remove      | `key` (type: String)                                                        |         |
+| Storage   | Method      | Parameters                                                                            |Notes |
+|-----------|-------------|---------------------------------------------------------------------------------------------||
+| `local`   | get         | `key` (type: String)                                                                        ||
+| `local`   | set         | `key` (type: String), `value` (type: any), `expiryInMinutes` (type: Number, default: null)  ||
+| `local`   | remove      | `key` (type: String)                                                                        ||
+| `local`   | clear       |  none                                                                                       ||
+| `cookie`  | get         | `key` (type: String)                                                                        ||
+| `cookie`  | set         | `key` (type: String), `value` (type: any), `expiryInMinutes` (type: Number, default: 5)     ||
+| `cookie`  | remove      | `key` (type: String)                                                                        ||
+| `cookie`  | clear       |  none                                                                                       ||
+| `session` | get         | `key` (type: String)                                                                        ||
+| `session` | set         | `key` (type: String), `value` (type: any), `expiryInMinutes` (type: Number, default: 5)     ||
+| `session` | remove      | `key` (type: String)                                                                        ||
+| `session` | clear       |  none                                                                                       ||
 ---
 
+Feel free to contribute [simple-webstorage](https://github.com/sutanlab/simple-webstorage) 🙂
 Copyright © 2019 by Sutan Gading Fadhillah Nasution

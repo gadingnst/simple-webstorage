@@ -1,3 +1,5 @@
+import { isNotNull } from './storage'
+
 export const set = (name, value, expiryInMinutes = 5) => {
   let expires = ''
   if (expiryInMinutes) {
@@ -6,6 +8,7 @@ export const set = (name, value, expiryInMinutes = 5) => {
     expires = '; expires=' + date.toGMTString()
   }
   document.cookie = name + '=' + JSON.stringify(value) + expires + '; path=/'
+  return value
 }
 
 export const get = name => {
@@ -20,5 +23,19 @@ export const get = name => {
 }
 
 export const remove = name => {
-  set(name, '', -1)
+  if (isNotNull(get(name))) {
+    set(name, '', -1)
+    return true
+  }
+  return false
+}
+
+export const clear = () => {
+  const res = document.cookie;
+  const multiple = res.split(";");
+  for(let i = 0; i < multiple.length; i++) {
+    const key = multiple[i].split("=");
+    set(key[0], '', -1)
+  }
+  return true
 }

@@ -1,39 +1,43 @@
-const isNotNull = variable => {
-  if (typeof variable !== 'undefined' && variable !== null) return true
-  return false
-}
+import {
+  set as setStorage,
+  get as getStorage,
+  check as checkStorage,
+  remove as removeStorage,
+  clear as clearStorage,
+} from './storage'
 
 export const get = key => {
-  const cache = window.sessionStorage.getItem(key)
-  if (isNotNull(cache)) {
-    const cacheParsed = JSON.parse(cache)
-    if (isNotNull(cacheParsed)) {
-      const timeNow = new Date().getTime()
-      const dateCache = cacheParsed.created
-      const expiryInMilis = parseInt(cacheParsed.expiry, 10) * 60 * 1000
-      const expiryTime = parseInt(dateCache, 10) + expiryInMilis
-      
-      if (expiryTime > timeNow) return cacheParsed.value
-      else remove(key)
-    }
+  try {
+    return getStorage(checkStorage('sessionStorage'), key)
+  } catch(err) {
+    console.error(err)
   }
   return null
 }
 
-export const set = (key, value = '', expiryInMinutes = 5) => {
-  const data = {
-    created: new Date().getTime(),
-    value,
-    expiry: expiryInMinutes,
+export const set = (key, value = 0, expiryInMinutes = 5) => {
+  try {
+    return setStorage(checkStorage('sessionStorage'), key, value, expiryInMinutes)
+  } catch(err) {
+    console.error(err)
   }
-  window.sessionStorage.setItem(key, JSON.stringify(data))
-  return data
+  return false
 }
 
 export const remove = key => {
-  return window.sessionStorage.removeItem(key)
+  try {
+    return removeStorage(checkStorage('sessionStorage'), key)
+  } catch(err) {
+    console.error(err)
+  }
+  return false
 }
 
 export const clear = () => {
-  return window.sessionStorage.clear()
+  try {
+    return clearStorage(checkStorage('sessionStorage'))
+  } catch(err) {
+    console.error(err)
+  }
+  return false
 }

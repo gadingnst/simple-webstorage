@@ -1,7 +1,4 @@
-export const isNotNull = variable => {
-  if (typeof variable !== 'undefined' && variable !== null) return true
-  return false
-}
+export const isNotNull = variable => (typeof variable !== 'undefined' && variable !== null)
 
 export const check = storage => {
   if (storage in window && window[storage]) return window[storage]

@@ -22,9 +22,6 @@ import SimpleWebStorage from 'simple-webstorage'
 
 const storage = SimpleWebStorage()
 
-// or 
-// # const storage = require('simple-webstorage')()
-
 storage.local.set('key', 'value')
 storage.cookie.set('key', 'value', 5)
 storage.session.set('key', 'value', 5)
@@ -48,9 +45,28 @@ setLocalStorage('key', {
     'angry',
     'crying'
   ]
-})
+}) // empty the third parameter to store data permanently (only effected in local)
 
 console.log(getLocalStorage('key')) // { name: 'you', skill: ['angry', 'crying'] }
+```
+
+##### or you can import partial API like this :
+
+```js
+// # for cookie storage
+import CookieStorage from 'simple-webstorage/lib/cookie'
+
+// # for local storage
+// import LocalStorage from 'simple-webstorage/lib/local'
+
+// # for session storage
+// import SessionStorage from 'simple-webstorage/lib/session'
+
+const cookie = CookieStorage()
+
+cookie.set('remembered', true)
+
+console.log(cookie.get('remembered')) // true
 ```
 
 ### 2. All in minified js

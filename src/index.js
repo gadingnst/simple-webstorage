@@ -7,19 +7,22 @@ global.SimpleWebStorage = () => ({
     get: LocalStorage().get,
     set: LocalStorage().set,
     remove: LocalStorage().remove,
-    clear: LocalStorage().clear
+    clear: LocalStorage().clear,
+    keys: LocalStorage().keys
   },
   cookie: {
     get: CookieStorage().get,
     set: CookieStorage().set,
     remove: CookieStorage().remove,
-    clear: CookieStorage().clear
+    clear: CookieStorage().clear,
+    keys: CookieStorage().keys
   },
   session: {
     get: SessionStorage().get,
     set: SessionStorage().set,
     remove: SessionStorage().remove,
-    clear: SessionStorage().clear
+    clear: SessionStorage().clear,
+    keys: SessionStorage().keys
   }
 })
 

@@ -44,3 +44,9 @@ export const clear = storage => {
   storage.clear()
   return true
 }
+
+export const keys = storage => {
+  const keys = []
+  for (let i = 0; i < storage.length; i++) keys.push(storage.key(i))
+  return keys
+} 

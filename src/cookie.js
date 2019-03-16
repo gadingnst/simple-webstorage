@@ -1,6 +1,6 @@
 import { isNotNull } from './storage'
 
-export const set = (name, value, expiryInMinutes = 5) => {
+export const set = (name, value = 0, expiryInMinutes = 5) => {
   let expires = ''
   if (expiryInMinutes) {
     const date = new Date();
@@ -31,13 +31,22 @@ export const remove = name => {
 }
 
 export const clear = () => {
-  const res = document.cookie;
-  const multiple = res.split(";");
+  const res = document.cookie
+  const multiple = res.split(";")
   for(let i = 0; i < multiple.length; i++) {
-    const key = multiple[i].split("=");
-    set(key[0], '', -1)
+    set(multiple[i].split("=")[0], '', -1)
   }
   return true
 }
 
-export default () => ({ get, set, remove, clear })
+export const keys = () => {
+  const keys = []
+  const res = document.cookie
+  const multiple = res.split(";")
+  for(let i = 0; i < multiple.length; i++) {
+    keys.push(multiple[i].split("=")[0])
+  }
+  return keys
+}
+
+export default () => ({ get, set, remove, clear, keys })

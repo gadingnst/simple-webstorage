@@ -3,7 +3,8 @@ import {
   get as getStorage,
   check as checkStorage,
   remove as removeStorage,
-  clear as clearStorage
+  clear as clearStorage,
+  keys as keysStorage
 } from './storage'
 
 export const get = key => {
@@ -42,4 +43,13 @@ export const clear = () => {
   return false
 }
 
-export default () => ({ get, set, remove, clear })
+export const keys = () => {
+  try {
+    return keysStorage(checkStorage('sessionStorage'))
+  } catch(err) {
+    console.error(err.message)
+  }
+  return false
+}
+
+export default () => ({ get, set, remove, clear, keys })

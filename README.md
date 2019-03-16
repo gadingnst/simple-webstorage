@@ -22,7 +22,7 @@ import SimpleWebStorage from 'simple-webstorage'
 
 const storage = SimpleWebStorage()
 
-storage.local.set('key', 'value')
+storage.local.set('key', 'value') // empty the third parameter to store data permanently (only effected in local)
 storage.cookie.set('key', 'value', 5)
 storage.session.set('key', 'value', 5)
 ```
@@ -45,7 +45,7 @@ setLocalStorage('key', {
     'angry',
     'crying'
   ]
-}) // empty the third parameter to store data permanently (only effected in local)
+}) 
 
 console.log(getLocalStorage('key')) // { name: 'you', skill: ['angry', 'crying'] }
 ```
@@ -65,8 +65,10 @@ import CookieStorage from 'simple-webstorage/lib/cookie'
 const cookie = CookieStorage()
 
 cookie.set('remembered', true)
+cookie.set('forgotten', true)
 
-console.log(cookie.get('remembered')) // true
+console.log(cookie.get('remembered')) // true # get values from key. returns any
+console.log(cookie.keys()) // ['remembered', 'forgotten'] # list all keys. returns array
 ```
 
 ### 2. All in minified js
@@ -87,17 +89,15 @@ console.log(cookie.get('remembered')) // true
 | Storage   | Method      | Parameters                                                                                  |
 |-----------|-------------|---------------------------------------------------------------------------------------------|
 | `local`   | get         | `key` (type: String)                                                                        |
-| `local`   | set         | `key` (type: String), `value` (type: any), `expiryInMinutes` (type: Number, default: null)  |
+| `local`   | set         | `key` (type: String), `value` (type: any, default: 0), `expiryInMinutes` (type: Number, default: null)  |
 | `local`   | remove      | `key` (type: String)                                                                        |
 | `local`   | clear       |  none                                                                                       |
-| `cookie`  | get         | `key` (type: String)                                                                        |
-| `cookie`  | set         | `key` (type: String), `value` (type: any), `expiryInMinutes` (type: Number, default: 5)     |
-| `cookie`  | remove      | `key` (type: String)                                                                        |
-| `cookie`  | clear       |  none                                                                                       |
-| `session` | get         | `key` (type: String)                                                                        |
-| `session` | set         | `key` (type: String), `value` (type: any), `expiryInMinutes` (type: Number, default: 5)     |
-| `session` | remove      | `key` (type: String)                                                                        |
-| `session` | clear       |  none                                                                                       |
+| `local`   | keys        |  none                                                                                       |
+| `cookie` or `session`  | get         | `key` (type: String)                                                           |
+| `cookie` or `session`  | set         | `key` (type: String), `value` (type: any, default: 0), `expiryInMinutes` (type: Number, default: 5)     |
+| `cookie` or `session`  | remove      | `key` (type: String)                                                                        |
+| `cookie` or `session`  | keys        |  none                                                                                       |
+| `cookie` or `session`  | clear       |  none                                                                               |
 
 ---
 Feel free to contribute [simple-webstorage](https://github.com/sutanlab/simple-webstorage) 🙂

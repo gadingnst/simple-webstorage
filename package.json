@@ -1,6 +1,6 @@
 {
   "name": "simple-webstorage",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "Lightweight utilities that can make easier to write and read application storage in client browser.",
   "main": "lib/index.js",
   "scripts": {
@@ -28,7 +28,8 @@
     "session-storage",
     "cookie-storage",
     "client-storage",
-    "storage"
+    "storage",
+    "cookie"
   ],
   "author": "Sutan Nst. <sutan.gnst@gmail.com>",
   "license": "MIT",

@@ -16,7 +16,7 @@ export const get = (storage, key) => {
       const expiryTime = parseInt(dateCache, 10) + expiryInMilis
       if (isNotNull(cacheParsed.expiry)) {
         if (expiryTime > timeNow) return cacheParsed.value
-        else remove(key)
+        else remove(storage, key)
       } else {
         return cacheParsed.value
       }
@@ -36,8 +36,11 @@ export const set = (storage, key, value, expiryInMinutes) => {
 }
 
 export const remove = (storage, key) => {
-  storage.removeItem(key)
-  return true
+  if (isNotNull(get(storage, key))) {
+    storage.removeItem(key)
+    return true
+  }
+  return false
 }
 
 export const clear = storage => {

@@ -36,11 +36,8 @@ export const set = (storage, key, value, expiryInMinutes) => {
 }
 
 export const remove = (storage, key) => {
-  if (isNotNull(get(storage, key))) {
-    storage.removeItem(key)
-    return true
-  }
-  return false
+  storage.removeItem(key)
+  return true
 }
 
 export const clear = storage => {
@@ -50,6 +47,9 @@ export const clear = storage => {
 
 export const keys = storage => {
   const keys = []
-  for (let i = 0; i < storage.length; i++) keys.push(storage.key(i))
+  for (let i = 0; i < storage.length; i++) {
+    const key = storage.key(i)
+    if (get(storage, key)) keys.push(key)
+  }
   return keys
 } 

@@ -42,7 +42,8 @@ export const keys = () => {
   const keys = []
   const cookies = document.cookie.split(';')
   for(let i = 0; i < cookies.length; i++) {
-    keys.push(cookies[i].split("=")[0])
+    const key = cookies[i].split("=")[0];
+    if(key !== '') keys.push(key)
   }
   return keys
 }

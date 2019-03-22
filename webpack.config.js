@@ -1,10 +1,15 @@
 const path = require('path')
 
 module.exports = {
-  entry: './lib/index.js',
+  entry: ['./src/index.js'],
   mode: 'production',
   output: {
-    path: path.resolve(__dirname, 'lib'),
-    filename: 'bundle/simple-webstorage.min.js'
+    path: path.join(__dirname, 'lib','bundle'),
+    filename: 'simple-webstorage.min.js',
+  },
+  optimization:{
+    splitChunks:{
+      chunks:'all'
+    }
   }
 }

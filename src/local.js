@@ -4,7 +4,8 @@ import {
   check as checkStorage,
   remove as removeStorage,
   clear as clearStorage,
-  keys as keysStorage
+  keys as keysStorage,
+  isNotEmpty
 } from './storage'
 
 export const get = key => {
@@ -16,8 +17,9 @@ export const get = key => {
   return null
 }
 
-export const set = (key, value = 0, expiryInMinutes = null) => {
+export const set = (key, value = 0, expiryInMinutes) => {
   try {
+    expiryInMinutes = isNotEmpty(expiryInMinutes) ? expiryInMinutes : null
     return setStorage(checkStorage('localStorage'), key, value, expiryInMinutes)
   } catch(err) {
     console.error(err.message)

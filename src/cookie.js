@@ -1,7 +1,8 @@
-import { isNotNull } from './storage'
+import { isNotNull, isNotEmpty } from './storage'
 
-export const set = (key, value = 0, expiryInMinutes = 5) => {
+export const set = (key, value = 0, expiryInMinutes) => {
   let expires = ''
+  expiryInMinutes = isNotEmpty(expiryInMinutes) ? expiryInMinutes : 5
   if (expiryInMinutes) {
     const date = new Date();
     date.setTime(date.getTime() + (expiryInMinutes * 60 * 1000))
@@ -35,7 +36,6 @@ export const clear = () => {
   for(let i = 0; i < cookies.length; i++) {
     set(cookies[i].split("=")[0], '', -1)
   }
-  return true
 }
 
 export const keys = () => {

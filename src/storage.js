@@ -1,5 +1,7 @@
 export const isNotNull = variable => (typeof variable !== 'undefined' && variable !== null)
 
+export const isNotEmpty = variable => (typeof variable !== 'undefined' && variable)
+
 export const check = storage => {
   if (storage in window && window[storage]) return window[storage]
   throw new Error(`Your Browser doesn't support ${storage}`)
@@ -16,7 +18,7 @@ export const get = (storage, key) => {
       const expiryTime = parseInt(dateCache, 10) + expiryInMilis
       if (isNotNull(cacheParsed.expiry)) {
         if (expiryTime > timeNow) return cacheParsed.value
-        else remove(storage, key)
+        else storage.removeItem(key)
       } else {
         return cacheParsed.value
       }
@@ -36,13 +38,15 @@ export const set = (storage, key, value, expiryInMinutes) => {
 }
 
 export const remove = (storage, key) => {
-  storage.removeItem(key)
-  return true
+  if(get(storage, key)) {
+    storage.removeItem(key)
+    return true
+  }
+  return false
 }
 
 export const clear = storage => {
-  storage.clear()
-  return true
+  return storage.clear()
 }
 
 export const keys = storage => {

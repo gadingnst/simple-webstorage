@@ -1,4 +1,7 @@
-# [Simple Web Storage](https://www.npmjs.com/package/simple-webstorage)
+# Simple Web Storage
+
+![npm](https://img.shields.io/npm/v/simple-webstorage.svg) ![npm](https://img.shields.io/npm/dw/simple-webstorage.svg) ![npm](https://img.shields.io/npm/dt/simple-webstorage.svg)
+
 > Lightweight utilities that can make easier to write and read application storage in client browser.
 
 ### Support :

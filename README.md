@@ -1,6 +1,6 @@
 # Simple Web Storage
 
-[![NPM](https://img.shields.io/npm/l/simple-webstorage.svg)](https://www.npmjs.com/package/simple-webstorage) [![Build Status](https://travis-ci.org/sutanlab/simple-webstorage.svg?branch=master)](https://travis-ci.org/sutanlab/simple-webstorage) [![npm](https://img.shields.io/npm/v/simple-webstorage.svg)](https://www.npmjs.com/package/simple-webstorage) [![npm](https://img.shields.io/npm/dt/simple-webstorage.svg)](https://www.npmjs.com/package/simple-webstorage) [![npm](https://img.shields.io/bundlephobia/min/simple-webstorage.svg)](https://unpkg.com/simple-webstorage/lib/bundle/simple-webstorage.min.js) [![GitHub issues](https://img.shields.io/github/issues/sutanlab/simple-webstorage.svg)](https://github.com/sutanlab/simple-webstorage/issues)
+[![NPM](https://img.shields.io/npm/l/simple-webstorage.svg)](https://www.npmjs.com/package/simple-webstorage) [![Build Status](https://travis-ci.org/sutanlab/simple-webstorage.svg?branch=master)](https://travis-ci.org/sutanlab/simple-webstorage) [![npm](https://img.shields.io/npm/v/simple-webstorage.svg)](https://www.npmjs.com/package/simple-webstorage) [![npm](https://img.shields.io/npm/dt/simple-webstorage.svg)](https://www.npmjs.com/package/simple-webstorage) [![npm](https://img.shields.io/bundlephobia/min/simple-webstorage.svg)](https://unpkg.com/simple-webstorage/lib/bundle/simple-webstorage.min.js) [![GitHub issues](https://img.shields.io/github/issues/sutanlab/simple-webstorage.svg)](https://github.com/sutanlab/simple-webstorage/issues) [![Website](https://img.shields.io/website/https/sutanlab.js.org/simple-webstorage.svg)](https://sutanlab.js.org/simple-webstorage)
 
 > Lightweight utilities that can make easier to write and read application storage in client browser.
 
@@ -96,16 +96,12 @@ console.log(cookie.keys()) // ['remembered', 'forgotten'] # list all keys. retur
 
 | Storage   | Method      | Parameters                                                                                  |
 |-----------|-------------|---------------------------------------------------------------------------------------------|
-| `local`   | get         | `key` (type: String)                                                                        |
 | `local`   | set         | `key` (type: String), `value` (type: any, default: 0), `expiryInMinutes` (type: Number, default: null)  |
-| `local`   | remove      | `key` (type: String)                                                                        |
-| `local`   | clear       |  none                                                                                       |
-| `local`   | keys        |  none                                                                                       |
-| `cookie` or `session`  | get         | `key` (type: String)                                                           |
 | `cookie` or `session`  | set         | `key` (type: String), `value` (type: any, default: 0), `expiryInMinutes` (type: Number, default: 5)     |
-| `cookie` or `session`  | remove      | `key` (type: String)                                                                        |
-| `cookie` or `session`  | keys        |  none                                                                                       |
-| `cookie` or `session`  | clear       |  none                                                                               |
+| `local` or `cookie` or `session`  | get         | `key` (type: String)                                                           |
+| `local` or `cookie` or `session`  | remove      | `key` (type: String)                                                                        |
+| `local` or `cookie` or `session`  | keys        |  none                                                                                       |
+| `local` or `cookie` or `session`  | clear       |  none                                                                               |
 
 ---
 Feel free to contribute [simple-webstorage](https://github.com/sutanlab/simple-webstorage) 🙂

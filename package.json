@@ -1,6 +1,6 @@
 {
   "name": "simple-webstorage",
-  "version": "1.4.2",
+  "version": "1.5.0",
   "description": "Lightweight utilities that can make easier to write and read application storage in client browser.",
   "main": "lib/index.js",
   "scripts": {

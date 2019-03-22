@@ -2,6 +2,3 @@
 /node_modules/
 /coverage/
 package-lock.json
-
-# ignore bundle directory
-!/lib/bundle/

@@ -1,6 +1,6 @@
 # Simple Web Storage
 
-![npm](https://img.shields.io/npm/v/simple-webstorage.svg) ![npm](https://img.shields.io/npm/dw/simple-webstorage.svg) ![npm](https://img.shields.io/npm/dt/simple-webstorage.svg)
+[![Build Status](https://travis-ci.org/sutanlab/simple-webstorage.svg?branch=master)](https://travis-ci.org/sutanlab/simple-webstorage) ![npm](https://img.shields.io/npm/v/simple-webstorage.svg) ![npm](https://img.shields.io/npm/dw/simple-webstorage.svg) ![npm](https://img.shields.io/npm/dt/simple-webstorage.svg) ![npm bundle size](https://img.shields.io/bundlephobia/min/simple-webstorage.svg)
 
 > Lightweight utilities that can make easier to write and read application storage in client browser.
 
@@ -77,7 +77,7 @@ console.log(cookie.keys()) // ['remembered', 'forgotten'] # list all keys. retur
 ### 2. All in minified js
 
 ```html
-<script type="text/javascript" src="https://sutanlab.js.org/simple-webstorage/lib/bundle/simple-webstorage.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/simple-webstorage/lib/bundle/simple-webstorage.min.js"></script>
 <script type="text/javascript">
   var storage = SimpleWebStorage();
 

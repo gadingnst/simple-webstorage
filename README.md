@@ -1,6 +1,6 @@
 # Simple Web Storage
 
-[![Build Status](https://travis-ci.org/sutanlab/simple-webstorage.svg?branch=master)](https://travis-ci.org/sutanlab/simple-webstorage) [![npm](https://img.shields.io/npm/v/simple-webstorage.svg)](https://www.npmjs.com/package/simple-webstorage) [![npm](https://img.shields.io/npm/dw/simple-webstorage.svg)](https://www.npmjs.com/package/simple-webstorage) [![npm](https://img.shields.io/npm/dt/simple-webstorage.svg)](https://www.npmjs.com/package/simple-webstorage) [![npm](https://img.shields.io/bundlephobia/min/simple-webstorage.svg)](https://unpkg.com/simple-webstorage/lib/bundle/simple-webstorage.min.js)
+[![Build Status](https://travis-ci.org/sutanlab/simple-webstorage.svg?branch=master)](https://travis-ci.org/sutanlab/simple-webstorage) [![npm](https://img.shields.io/npm/v/simple-webstorage.svg)](https://www.npmjs.com/package/simple-webstorage) [![npm](https://img.shields.io/npm/dt/simple-webstorage.svg)](https://www.npmjs.com/package/simple-webstorage) [![npm](https://img.shields.io/bundlephobia/min/simple-webstorage.svg)](https://unpkg.com/simple-webstorage/lib/bundle/simple-webstorage.min.js)
 
 > Lightweight utilities that can make easier to write and read application storage in client browser.
 

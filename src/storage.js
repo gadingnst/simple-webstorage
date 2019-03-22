@@ -45,10 +45,6 @@ export const remove = (storage, key) => {
   return false
 }
 
-export const clear = storage => {
-  return storage.clear()
-}
-
 export const keys = storage => {
   const keys = []
   for (let i = 0; i < storage.length; i++) {
@@ -57,3 +53,5 @@ export const keys = storage => {
   }
   return keys
 } 
+
+export const clear = storage => storage.clear()

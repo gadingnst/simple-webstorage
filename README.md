@@ -1,6 +1,6 @@
 # Simple Web Storage
 
-[![Build Status](https://travis-ci.org/sutanlab/simple-webstorage.svg?branch=master)](https://travis-ci.org/sutanlab/simple-webstorage) [![npm](https://img.shields.io/npm/v/simple-webstorage.svg)](https://www.npmjs.com/package/simple-webstorage) [![npm](https://img.shields.io/npm/dt/simple-webstorage.svg)](https://www.npmjs.com/package/simple-webstorage) [![npm](https://img.shields.io/bundlephobia/min/simple-webstorage.svg)](https://unpkg.com/simple-webstorage/lib/bundle/simple-webstorage.min.js)
+[![NPM](https://img.shields.io/npm/l/simple-webstorage.svg)](https://www.npmjs.com/package/simple-webstorage) [![Build Status](https://travis-ci.org/sutanlab/simple-webstorage.svg?branch=master)](https://travis-ci.org/sutanlab/simple-webstorage) [![npm](https://img.shields.io/npm/v/simple-webstorage.svg)](https://www.npmjs.com/package/simple-webstorage) [![npm](https://img.shields.io/npm/dt/simple-webstorage.svg)](https://www.npmjs.com/package/simple-webstorage) [![npm](https://img.shields.io/bundlephobia/min/simple-webstorage.svg)](https://unpkg.com/simple-webstorage/lib/bundle/simple-webstorage.min.js) [![GitHub commit activity](https://img.shields.io/github/commit-activity/w/sutanlab/simple-webstorage.svg)](https://github.com/sutanlab/simple-webstorage) [![GitHub issues](https://img.shields.io/github/issues/sutanlab/simple-webstorage.svg)](https://github.com/sutanlab/simple-webstorage/issues)
 
 > Lightweight utilities that can make easier to write and read application storage in client browser.
 
@@ -10,12 +10,16 @@
 - Session Storage
 ---
 
-## How using this package
+## HOW TO USE
 
-### 1. Use Package with NPM
+### 1. Use Package with NPM or YARN
 
 ```bash
+# with npm
 $ npm i simple-webstorage --save
+
+# or with yarn
+$ yarn add simple-webstorage
 ```
 
 #### All API import

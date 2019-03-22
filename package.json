@@ -1,6 +1,6 @@
 {
   "name": "simple-webstorage",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "Lightweight utilities that can make easier to write and read application storage in client browser.",
   "main": "lib/index.js",
   "scripts": {
@@ -22,14 +22,16 @@
     "url": "git+https://github.com/sutanlab/simple-webstorage.git"
   },
   "keywords": [
-    "web-storage",
-    "browser-storage",
-    "local-storage",
-    "session-storage",
-    "cookie-storage",
-    "client-storage",
+    "browser storage",
+    "web storage",
+    "local storage",
+    "session storage",
+    "cookie storage",
+    "client storage",
     "storage",
-    "cookie"
+    "cookie",
+    "local",
+    "session"
   ],
   "author": "Sutan Nst. <sutan.gnst@gmail.com>",
   "license": "MIT",

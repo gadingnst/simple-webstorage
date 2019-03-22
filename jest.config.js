@@ -3,6 +3,7 @@
 
 module.exports = {
   clearMocks: true,
-  coverageDirectory: "coverage",
   testEnvironment: "node",
+  coverageDirectory: "coverage",
+  collectCoverage: true
 };

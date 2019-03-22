@@ -8,6 +8,7 @@
 - Local Storage
 - Cookie Storage
 - Session Storage
+
 ---
 
 ## HOW TO USE

@@ -44,7 +44,7 @@
     "@babel/core": "7.5.5",
     "@babel/preset-env": "7.5.5",
     "jest": "24.9.0",
-    "webpack": "4.39.3",
+    "webpack": "4.41.0",
     "jsdom": "15.1.1",
     "webpack-cli": "3.3.7"
   },

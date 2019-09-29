@@ -46,7 +46,7 @@
     "jest": "24.9.0",
     "webpack": "4.39.3",
     "jsdom": "15.1.1",
-    "webpack-cli": "3.3.7"
+    "webpack-cli": "3.3.9"
   },
   "dependencies": {}
 }

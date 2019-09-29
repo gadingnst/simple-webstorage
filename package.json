@@ -40,9 +40,9 @@
   },
   "homepage": "https://sutanlab.js.org/simple-webstorage",
   "devDependencies": {
-    "@babel/cli": "7.5.5",
-    "@babel/core": "7.5.5",
-    "@babel/preset-env": "7.5.5",
+    "@babel/cli": "7.6.2",
+    "@babel/core": "7.6.2",
+    "@babel/preset-env": "7.6.2",
     "jest": "24.9.0",
     "webpack": "4.39.3",
     "jsdom": "15.1.1",

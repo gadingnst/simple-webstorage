@@ -104,9 +104,9 @@ console.log(cookie.keys()) // ['remembered', 'forgotten'] # list all keys. retur
 | `local` or `cookie` or `session`  | clear       |  none                                                                               |
 
 ## Support Me
-### 1. Global
+### Global
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/B0B71P7PB)
-### 2. Indonesia
+### Indonesia
 - [Trakteer](https://trakteer.id/sutanlab)
 - [Karyakarsa](https://karyakarsa.com/sutanlab)
 
